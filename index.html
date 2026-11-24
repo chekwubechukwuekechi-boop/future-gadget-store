@@ -2,7 +2,155 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUTURE GADGET | Technology for a better tomorrow</title>
+<meta name="description" content="Shop phones, laptops, accessories and home appliances at FUTURE GADGET.">
+<style>
+:root{--navy:#101d35;--blue:#1769d2;--pale:#f3f6fb;--ink:#182338;--muted:#68758a;--line:#e2e8f0;--white:#fff;--green:#16834b}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--pale);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:12px 16px;background:var(--blue);color:white;font-weight:700}button.secondary{background:#e8eef8;color:var(--navy)}button.danger{background:#b42318}button:disabled{opacity:.55;cursor:not-allowed}.top{background:var(--navy);color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:1px;font-size:22px}.tag{color:#c6d4e8;font-size:12px;margin-top:4px}.top a{color:white;text-decoration:none}.wrap{max-width:1100px;margin:auto;padding:26px 18px}.hero{background:linear-gradient(120deg,#10213d,#1769d2);color:white;padding:36px;border-radius:20px;margin-bottom:24px}.hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 10px}.hero p{max-width:620px;line-height:1.6;color:#e0eafa}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select,.field input,.field textarea,.field select{padding:12px;border:1px solid var(--line);border-radius:9px;background:white;min-width:0;width:100%}.toolbar input{flex:1;min-width:180px}.toolbar select{width:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card,.panel{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden}.photo{height:175px;background:#e9eef6;display:flex;align-items:center;justify-content:center;color:#8491a5;font-size:14px}.photo img{width:100%;height:100%;object-fit:cover}.details{padding:15px}.details h3{margin:0 0 8px;font-size:17px}.muted{color:var(--muted);font-size:13px;line-height:1.5}.price{font-weight:900;font-size:20px;color:var(--blue);margin:10px 0}.pill{display:inline-block;padding:5px 9px;border-radius:30px;background:#edf3fc;color:#244c80;font-size:11px;font-weight:700;margin-right:5px}.empty{padding:35px;text-align:center;color:var(--muted);background:white;border-radius:14px}.footer{text-align:center;padding:30px;color:var(--muted);font-size:13px}.panel{padding:20px;margin:18px 0}.panel h2{margin-top:0}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:13px}.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.notice{padding:12px;border-radius:10px;background:#eef5ff;color:#244c80;margin:12px 0;font-size:14px}.error{background:#fff0ef;color:#9b2118}.success{background:#eaf8ef;color:#17633a}.hidden{display:none!important}.adminhead{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.productrow{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.productrow img{width:58px;height:58px;object-fit:cover;border-radius:8px;background:#eef2f7}.productrow .grow{flex:1;min-width:120px}.small{font-size:12px;color:var(--muted)}a{color:var(--blue)}@media(max-width:520px){.hero{padding:25px}.top{padding:15px}.productrow{align-items:flex-start}.productrow .row{flex-basis:100%}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/config.js"></script>
+</head>
+<body>
+<header class="top">
+ <div><div class="brand">FUTURE GADGET</div><div class="tag">Technology for a better tomorrow.</div></div>
+ <nav class="row" style="flex:0 0 auto"><a href="/">Shop</a><a href="/admin">Admin</a><a href="https://wa.me/2348163345714" target="_blank" rel="noopener">WhatsApp</a></nav>
+</header>
+<main class="wrap">
+<section id="shopView">
+ <div class="hero"><h1>Find the right tech for tomorrow.</h1><p>Explore phones, laptops, accessories and home appliances. Brand-new and fairly used options available. Contact us on WhatsApp to place an order.</p><a href="https://wa.me/2348163345714" target="_blank" rel="noopener"><button class="secondary">Chat on WhatsApp</button></a></div>
+ <div class="toolbar"><input id="search" placeholder="Search products..." aria-label="Search products"><select id="category"><option value="">All categories</option><option>Phones</option><option>Laptops</option><option>Accessories</option><option>Home Appliances</option><option>Other</option></select><select id="condition"><option value="">All conditions</option><option>Brand New</option><option>Fairly Used</option></select></div>
+ <div id="productGrid" class="grid"><div class="empty">Loading products…</div></div>
+</section>
+<section id="adminView" class="hidden">
+ <div class="adminhead"><div><h1 style="margin-bottom:4px">Admin dashboard</h1><div class="muted">Manage your FUTURE GADGET inventory.</div></div><button id="logoutBtn" class="secondary hidden">Sign out</button></div>
+ <div id="adminMessage" class="notice">Sign in with your administrator account.</div>
+ <form id="loginForm" class="panel" style="max-width:480px">
+  <h2>Admin sign in</h2>
+  <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required></div>
+  <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+  <button type="submit">Sign in</button>
+ </form>
+ <div id="adminTools" class="hidden">
+  <form id="productForm" class="panel">
+   <h2 id="formTitle">Add a product</h2>
+   <input type="hidden" id="productId">
+   <div class="formgrid">
+    <div class="field"><label for="pname">Product name *</label><input id="pname" required maxlength="100"></div>
+    <div class="field"><label for="price">Price (₦) *</label><input id="price" type="number" min="0" step="1" required></div>
+    <div class="field"><label for="pcategory">Category *</label><select id="pcategory" required><option value="">Choose category</option><option>Phones</option><option>Laptops</option><option>Accessories</option><option>Home Appliances</option><option>Other</option></select></div>
+    <div class="field"><label for="pcondition">Condition *</label><select id="pcondition" required><option>Brand New</option><option>Fairly Used</option></select></div>
+    <div class="field"><label for="stock">Stock quantity *</label><input id="stock" type="number" min="0" step="1" required value="1"></div>
+    <div class="field"><label for="photo">Product photo</label><input id="photo" type="file" accept="image/*"><span class="small">Choose a photo from your phone. Leave empty to keep the current photo when editing.</span></div>
+   </div>
+   <div class="field"><label for="description">Description</label><textarea id="description" rows="3" maxlength="1000"></textarea></div>
+   <div class="row"><button type="submit" id="saveProduct">Save product</button><button type="button" class="secondary" id="cancelEdit">Clear form</button></div>
+  </form>
+  <div class="panel"><h2>Your products</h2><div id="adminProducts" class="muted">Loading inventory…</div></div>
+ </div>
+</section>
+</main>
+<footer class="footer">FUTURE GADGET · Technology for a better tomorrow · Nigeria</footer>
+<script>
+(() => {
+ const $ = id => document.getElementById(id);
+ const isAdmin = location.pathname.replace(/\/+$/,'') === '/admin';
+ $('shopView').classList.toggle('hidden',isAdmin);
+ $('adminView').classList.toggle('hidden',!isAdmin);
+ const cfg = window.FG_CONFIG || {};
+ let db = null, allProducts = [], currentUser = null;
+ const money = n => '₦' + Number(n || 0).toLocaleString('en-NG');
+ const message = (txt,kind='') => { $('adminMessage').textContent=txt; $('adminMessage').className='notice '+kind; };
+ function setupDb(){
+  if(!window.supabase || !cfg.url || !cfg.publishableKey || cfg.publishableKey.includes('PASTE_')) return false;
+  db = window.supabase.createClient(cfg.url,cfg.publishableKey); return true;
+ }
+ async function loadProducts(){
+  if(!db){ $('productGrid').innerHTML='<div class="empty">Store connection is not configured yet. Check config.js.</div>'; return; }
+  const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
+  if(error){$('productGrid').innerHTML='<div class="empty">Products could not be loaded. Please try again later.</div>';return;}
+  allProducts=data||[]; renderProducts();
+ }
+ function renderProducts(){
+  const q=$('search').value.toLowerCase(), cat=$('category').value, cond=$('condition').value;
+  const list=allProducts.filter(p=>(!q||[p.name,p.description,p.category].join(' ').toLowerCase().includes(q))&&(!cat||p.category===cat)&&(!cond||p.condition===cond));
+  $('productGrid').innerHTML=list.length?list.map(p=>`<article class="card"><div class="photo">${p.image_url?`<img src="${escapeAttr(p.image_url)}" alt="${escapeAttr(p.name)}">`:'Product photo'}</div><div class="details"><h3>${escapeHtml(p.name)}</h3><span class="pill">${escapeHtml(p.condition||'')}</span><span class="pill">${escapeHtml(p.category||'')}</span><div class="price">${money(p.price)}</div><div class="muted">${escapeHtml(p.description||'')}</div><div class="muted">${Number(p.stock)>0?'In stock: '+Number(p.stock):'Out of stock'}</div><p><a target="_blank" rel="noopener" href="https://wa.me/2348163345714?text=${encodeURIComponent('Hello FUTURE GADGET, I am interested in '+p.name+' priced at '+money(p.price)+'.')}"><button>Enquire on WhatsApp</button></a></p></div></article>`).join(''):'<div class="empty">No products match your search yet.</div>';
+ }
+ function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function escapeAttr(s){return escapeHtml(s);}
+ $('search').addEventListener('input',renderProducts);$('category').addEventListener('change',renderProducts);$('condition').addEventListener('change',renderProducts);
+ function setAdminUI(user){
+  currentUser=user; const logged=!!user;
+  $('loginForm').classList.toggle('hidden',logged);$('adminTools').classList.toggle('hidden',!logged);$('logoutBtn').classList.toggle('hidden',!logged);
+ }
+ async function checkSession(){
+  if(!db)return;
+  const {data}=await db.auth.getSession(); const session=data.session;
+  if(session){
+   const {data:userData}=await db.auth.getUser();
+   const user=userData.user;
+   if(user && user.app_metadata && user.app_metadata.role==='admin'){setAdminUI(user);message('Signed in as administrator.','success');await loadAdminProducts();}
+   else {await db.auth.signOut();setAdminUI(null);message('This account does not have the administrator role. Ask the project owner to check the admin role in Supabase.','error');}
+  }
+ }
+ $('loginForm').addEventListener('submit',async e=>{
+  e.preventDefault(); if(!db){message('Supabase is not configured. Check config.js.','error');return;}
+  message('Signing in…');
+  const {data,error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});
+  if(error){message('Sign-in failed. Check your email and password, then try again.','error');return;}
+  const user=data.user;
+  if(!user || !user.app_metadata || user.app_metadata.role!=='admin'){await db.auth.signOut();message('Login succeeded, but this account does not have the admin role.','error');return;}
+  setAdminUI(user);message('Welcome to your admin dashboard.','success');await loadAdminProducts();
+ });
+ $('logoutBtn').addEventListener('click',async()=>{if(db)await db.auth.signOut();setAdminUI(null);message('You have signed out.');});
+ async function loadAdminProducts(){
+  const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
+  if(error){$('adminProducts').textContent='Could not load products. Check the products table permissions.';return;}
+  allProducts=data||[];
+  $('adminProducts').innerHTML=allProducts.length?allProducts.map(p=>`<div class="productrow"><img src="${escapeAttr(p.image_url||'')}" alt=""><div class="grow"><strong>${escapeHtml(p.name)}</strong><div class="small">${money(p.price)} · ${escapeHtml(p.condition||'')} · Stock: ${Number(p.stock||0)}</div></div><div class="row" style="flex:0 0 auto"><button class="secondary" data-edit="${escapeAttr(p.id)}">Edit</button><button class="danger" data-delete="${escapeAttr(p.id)}">Delete</button></div></div>`).join(''):'No products yet. Add your first product above.';
+  $('adminProducts').querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editProduct(b.dataset.edit)));
+  $('adminProducts').querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteProduct(b.dataset.delete)));
+ }
+ function resetForm(){ $('productForm').reset();$('productId').value='';$('stock').value='1';$('formTitle').textContent='Add a product';$('saveProduct').textContent='Save product';}
+ $('cancelEdit').addEventListener('click',resetForm);
+ function editProduct(id){
+  const p=allProducts.find(x=>String(x.id)===String(id));if(!p)return;
+  $('productId').value=p.id;$('pname').value=p.name||'';$('price').value=p.price??'';$('pcategory').value=p.category||'';$('pcondition').value=p.condition||'Brand New';$('stock').value=p.stock??0;$('description').value=p.description||'';
+  $('formTitle').textContent='Edit product';$('saveProduct').textContent='Update product';window.scrollTo({top:0,behavior:'smooth'});
+ }
+ async function deleteProduct(id){
+  if(!confirm('Delete this product? This cannot be undone.'))return;
+  const {error}=await db.from('products').delete().eq('id',id);
+  if(error){message('Could not delete product. Check admin permissions.','error');return;}
+  message('Product deleted.','success');await loadAdminProducts();await loadProducts();
+ }
+ $('productForm').addEventListener('submit',async e=>{
+  e.preventDefault();if(!db||!currentUser)return;
+  const id=$('productId').value;
+  const record={name:$('pname').value.trim(),price:Number($('price').value),category:$('pcategory').value,condition:$('pcondition').value,stock:Number($('stock').value),description:$('description').value.trim()};
+  const file=$('photo').files[0];
+  if(file){
+   const safeName=file.name.toLowerCase().replace(/[^a-z0-9._-]/g,'-');
+   const path=Date.now()+'-'+safeName;
+   const {error:uploadError}=await db.storage.from('product-images').upload(path,file,{upsert:false,contentType:file.type});
+   if(uploadError){message('Photo upload failed. Check the product-images bucket permissions.','error');return;}
+   const {data:urlData}=db.storage.from('product-images').getPublicUrl(path);record.image_url=urlData.publicUrl;
+  }
+  const result=id?await db.from('products').update(record).eq('id',id):await db.from('products').insert(record);
+  if(result.error){message('Could not save product. Check the table columns and admin permissions.','error');return;}
+  message(id?'Product updated successfully.':'Product added successfully.','success');resetForm();await loadAdminProducts();await loadProducts();
+ });
+ if(setupDb()){loadProducts();if(isAdmin)checkSession();}
+ else {if(!isAdmin)$('productGrid').innerHTML='<div class="empty">Store configuration is missing. Please check config.js.</div>';else message('Supabase configuration is missing. Check config.js.','error');}
+})();
+</script>
+</body>
+</html>
 <title>FUTURE GADGET | Technology for a better tomorrow</title>
 <meta name="description" content="Shop phones, laptops, accessories and home appliances at FUTURE GADGET.">
 <style>
