@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FUTURE GADGET | Technology for a better tomorrow</title>
-<meta name="description" content="Shop phones, laptops, accessories and home appliances at FUTURE GADGET.">
+<meta name="description" content="Shop phones, laptops, power banks, accessories and home appliances at FUTURE GADGET.">
 <style>
 :root{--navy:#0c1830;--blue:#2463eb;--ink:#172338;--muted:#64748b;--line:#e5eaf1;--bg:#f7f9fc}
 *{box-sizing:border-box}
@@ -74,6 +74,9 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 .success{background:#ecfdf5;color:#166534}
 .muted{color:var(--muted)}
 .admin-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.specs{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0}
+.power-fields{padding:14px;background:#f3f7ff;border:1px solid #dce8ff;border-radius:12px}
+.power-fields h4{margin:0 0 10px;color:#173c7a}
 @media(max-width:850px){.links{display:none}.hero{grid-template-columns:1fr;padding:26px}.hero img{height:220px}.products{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:580px){.products{grid-template-columns:repeat(2,1fr);gap:9px}.product img{height:145px}.body{padding:10px}.cats{grid-template-columns:repeat(2,1fr);gap:9px}.hero{padding:22px}.benefits{grid-template-columns:1fr}.banner{display:block}.foot{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.admin-item{align-items:flex-start}.admin-item .actions{flex-direction:column}}
 </style>
@@ -81,7 +84,7 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 <script src="/config.js"></script>
 </head>
 <body>
-<div class="announcement">PHONES · LAPTOPS · ACCESSORIES · HOME APPLIANCES | BRAND NEW & FAIRLY USED</div>
+<div class="announcement">PHONES · LAPTOPS · POWER BANKS · ACCESSORIES · HOME APPLIANCES | BRAND NEW & FAIRLY USED</div>
 <header><div class="wrap nav">
 <a class="brand" href="/"><span class="logo">FG</span><span>FUTURE GADGET<small class="tag">Technology for a better tomorrow.</small></span></a>
 <nav class="links"><a href="#catalogue">Shop</a><a href="#categories">Categories</a><a href="#contact">Contact</a></nav>
@@ -92,7 +95,7 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 <section class="hero">
 <div><small style="color:#b5d1ff;font-weight:800;letter-spacing:1.5px">WELCOME TO FUTURE GADGET</small>
 <h1>Technology that moves you forward.</h1>
-<p>Explore phones, laptops, accessories and home essentials. Browse brand-new and fairly used options and enquire about availability.</p>
+<p>Explore phones, laptops, power banks, accessories and home essentials. Browse brand-new and fairly used options and enquire about availability.</p>
 <a class="cta" href="#catalogue">Explore catalogue</a></div>
 <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="Smartphone showcase">
 </section>
@@ -100,12 +103,13 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 <div class="cats">
 <div class="cat" data-cat="Phones"><div class="emoji">📱</div><div><b>Phones</b><small>Phones & tablets</small></div></div>
 <div class="cat" data-cat="Laptops"><div class="emoji">💻</div><div><b>Laptops</b><small>Work & study</small></div></div>
+<div class="cat" data-cat="Power Banks"><div class="emoji">🔋</div><div><b>Power banks</b><small>Portable charging</small></div></div>
 <div class="cat" data-cat="Accessories"><div class="emoji">🎧</div><div><b>Accessories</b><small>Everyday essentials</small></div></div>
 <div class="cat" data-cat="Home Appliances"><div class="emoji">🏠</div><div><b>Home appliances</b><small>Home & living</small></div></div>
 </div></section>
 <section class="section" id="catalogue"><div class="head"><h2>Explore the catalogue</h2><p>Current products, prices and availability.</p></div>
 <div class="toolbar"><input id="search" placeholder="Search products or brands…" aria-label="Search products">
-<select id="category"><option value="">All categories</option><option>Phones</option><option>Laptops</option><option>Accessories</option><option>Home Appliances</option><option>Appliances</option><option>Other</option></select>
+<select id="category"><option value="">All categories</option><option>Phones</option><option>Laptops</option><option>Power Banks</option><option>Accessories</option><option>Home Appliances</option><option>Appliances</option><option>Other</option></select>
 <select id="condition"><option value="">All conditions</option><option>Brand New</option><option>Fairly Used</option></select></div>
 <div class="products" id="grid"><div class="empty">Loading products…</div></div>
 </section>
@@ -132,10 +136,20 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 <input type="hidden" id="productId">
 <label>Product name<input class="field" id="pname" required maxlength="120" placeholder="e.g. Samsung Galaxy A15"></label>
 <label>Price (₦)<input class="field" id="price" type="number" min="0" step="1" required placeholder="e.g. 250000"></label>
-<label>Category<select class="field" id="pcat" required><option value="Phones">Phones</option><option value="Laptops">Laptops</option><option value="Accessories">Accessories</option><option value="Home Appliances">Home Appliances</option><option value="Appliances">Appliances</option><option value="Other">Other</option></select></label>
+<label>Category<select class="field" id="pcat" required><option value="Phones">Phones</option><option value="Laptops">Laptops</option><option value="Power Banks">Power Banks</option><option value="Accessories">Accessories</option><option value="Home Appliances">Home Appliances</option><option value="Appliances">Appliances</option><option value="Other">Other</option></select></label>
 <label>Condition<select class="field" id="conditionInput" required><option>Brand New</option><option>Fairly Used</option></select></label>
 <label>Stock quantity<input class="field" id="stock" type="number" min="0" step="1" value="1" required></label>
 <label>Product photo<input class="field" id="photo" type="file" accept="image/*"></label>
+<div id="powerbankFields" class="wide power-fields hidden">
+<h4>🔋 Power bank details</h4>
+<div class="formgrid">
+<label>Brand<input class="field" id="pbBrand" maxlength="80" placeholder="e.g. Oraimo, Anker, Xiaomi"></label>
+<label>Capacity<input class="field" id="pbCapacity" maxlength="40" placeholder="e.g. 20000mAh"></label>
+<label>Charging speed<input class="field" id="pbSpeed" maxlength="40" placeholder="e.g. 22.5W or 65W"></label>
+<label>USB ports<input class="field" id="pbPorts" maxlength="100" placeholder="e.g. 2 USB-A, 1 USB-C"></label>
+<label>Wireless charging<select class="field" id="pbWireless"><option value="false">No</option><option value="true">Yes</option></select></label>
+<label>Built-in cable<select class="field" id="pbCable"><option value="false">No</option><option value="true">Yes</option></select></label>
+</div></div>
 <label class="wide">Description<textarea class="field" id="description" rows="3" placeholder="Product details"></textarea></label>
 <div class="wide" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" type="submit" id="saveProduct">Save product</button><button class="btn light hidden" type="button" id="cancelEdit">Cancel edit</button></div>
 </form></div>
@@ -145,7 +159,7 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 
 <footer id="contact"><div class="wrap foot">
 <div><div class="brand"><span class="logo">FG</span><span>FUTURE GADGET<small class="tag">Technology for a better tomorrow.</small></span></div><p>Gadgets for work, study and everyday life.</p></div>
-<div><b>Categories</b><p><a href="/#categories">Phones</a><br><a href="/#categories">Laptops</a><br><a href="/#categories">Accessories</a><br><a href="/#categories">Home appliances</a></p></div>
+<div><b>Categories</b><p><a href="/#categories">Phones</a><br><a href="/#categories">Laptops</a><br><a href="/#categories">Power banks</a><br><a href="/#categories">Accessories</a><br><a href="/#categories">Home appliances</a></p></div>
 <div><b>Contact</b><p>WhatsApp: +234 816 334 5714<br><a href="https://wa.me/2348163345714">Message us</a></p></div>
 </div></footer>
 <a class="floatwa" href="https://wa.me/2348163345714?text=Hello%20Future%20Gadget" target="_blank" rel="noopener">WhatsApp</a>
@@ -170,8 +184,18 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 
   function renderStore(){
     const q=$('search').value.trim().toLowerCase(),cat=$('category').value,cond=$('condition').value;
-    const list=products.filter(p=>(!q||[p.name,p.description,p.category].join(' ').toLowerCase().includes(q))&&(!cat||p.category===cat)&&(!cond||p.condition===cond));
-    $('grid').innerHTML=list.length?list.map(p=>`<article class="product"><img src="${escapeHtml(p.image_url||'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80')}" alt="${escapeHtml(p.name)}" loading="lazy"><div class="body"><span class="label ${p.condition==='Fairly Used'?'used':''}">${escapeHtml(p.condition||'')}</span><h3>${escapeHtml(p.name)}</h3><div class="price">${money(p.price)}</div><p class="muted" style="font-size:12px">${Number(p.stock)>0?Number(p.stock)+' in stock':'Currently out of stock'}</p><div class="actions"><button class="btn light" data-enquire="${escapeHtml(p.id)}">Enquire</button><button class="btn dark" data-order="${escapeHtml(p.id)}">Order</button></div></div></article>`).join(''):'<div class="empty">No products match your search yet.</div>';
+    const list=products.filter(p=>(!q||[p.name,p.description,p.category,p.brand,p.powerbank_capacity].join(' ').toLowerCase().includes(q))&&(!cat||p.category===cat)&&(!cond||p.condition===cond));
+    $('grid').innerHTML=list.length?list.map(p=>{
+      const specs=p.category==='Power Banks'?[
+        p.brand?'Brand: '+p.brand:'',
+        p.powerbank_capacity?'Capacity: '+p.powerbank_capacity:'',
+        p.charging_speed?'Speed: '+p.charging_speed:'',
+        p.ports?'Ports: '+p.ports:'',
+        p.wireless_charging?'Wireless charging':'',
+        p.built_in_cable?'Built-in cable':''
+      ].filter(Boolean).join(' · '):'';
+      return `<article class="product"><img src="${escapeHtml(p.image_url||'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80')}" alt="${escapeHtml(p.name)}" loading="lazy"><div class="body"><span class="label ${p.condition==='Fairly Used'?'used':''}">${escapeHtml(p.condition||'')}</span><h3>${escapeHtml(p.name)}</h3>${specs?`<p class="specs">${escapeHtml(specs)}</p>`:''}<div class="price">${money(p.price)}</div><p class="muted" style="font-size:12px">${Number(p.stock)>0?Number(p.stock)+' in stock':'Currently out of stock'}</p><div class="actions"><button class="btn light" data-enquire="${escapeHtml(p.id)}">Enquire</button><button class="btn dark" data-order="${escapeHtml(p.id)}">Order</button></div></div></article>`;
+    }).join(''):'<div class="empty">No products match your search yet.</div>';
     $('grid').querySelectorAll('[data-enquire],[data-order]').forEach(btn=>btn.addEventListener('click',()=> {
       const p=products.find(x=>String(x.id)===String(btn.dataset.enquire||btn.dataset.order));
       if(p) window.open('https://wa.me/2348163345714?text='+encodeURIComponent('Hello FUTURE GADGET, I am interested in '+p.name+'. Price shown: '+money(p.price)+'. Please confirm availability.'),'_blank','noopener');
@@ -193,12 +217,18 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
     loginPanel.classList.toggle('hidden',allowed);
     dashboard.classList.toggle('hidden',!allowed);
   }
+  function togglePowerbankFields(){
+    const show=$('pcat').value==='Power Banks';
+    $('powerbankFields').classList.toggle('hidden',!show);
+  }
+  $('pcat').addEventListener('change',togglePowerbankFields);
+
   async function loadAdminProducts(){
     const list=$('productList');list.textContent='Loading products…';
     const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
     if(error){list.textContent='Could not load products: '+error.message;return;}
     products=data||[];
-    list.innerHTML=products.length?products.map(p=>`<div class="admin-item"><img src="${escapeHtml(p.image_url||'')}" alt=""><div class="grow"><b>${escapeHtml(p.name)}</b><br><small>${money(p.price)} · ${escapeHtml(p.condition||'')} · Stock: ${Number(p.stock)||0}</small></div><div class="actions"><button class="btn light" data-edit="${escapeHtml(p.id)}">Edit</button><button class="btn light" data-delete="${escapeHtml(p.id)}">Delete</button></div></div>`).join(''):'<p class="muted">No products yet. Add your first product above.</p>';
+    list.innerHTML=products.length?products.map(p=>`<div class="admin-item"><img src="${escapeHtml(p.image_url||'')}" alt=""><div class="grow"><b>${escapeHtml(p.name)}</b><br><small>${escapeHtml(p.category||'')} · ${money(p.price)} · ${escapeHtml(p.condition||'')} · Stock: ${Number(p.stock)||0}</small>${p.category==='Power Banks'?`<br><small>${escapeHtml([p.brand,p.powerbank_capacity,p.charging_speed].filter(Boolean).join(' · '))}</small>`:''}</div><div class="actions"><button class="btn light" data-edit="${escapeHtml(p.id)}">Edit</button><button class="btn light" data-delete="${escapeHtml(p.id)}">Delete</button></div></div>`).join(''):'<p class="muted">No products yet. Add your first product above.</p>';
     list.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editProduct(b.dataset.edit)));
     list.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteProduct(b.dataset.delete)));
   }
@@ -226,12 +256,14 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
   $('logout').addEventListener('click',async()=>{if(db)await db.auth.signOut();setAdminView(false);clearMessage(adminMsg);message(loginMsg,'You have signed out.');});
 
   function resetProductForm(){
-    $('productForm').reset();$('productId').value='';$('stock').value='1';$('formTitle').textContent='Add a product';$('saveProduct').textContent='Save product';$('cancelEdit').classList.add('hidden');
+    $('productForm').reset();$('productId').value='';$('stock').value='1';$('formTitle').textContent='Add a product';$('saveProduct').textContent='Save product';$('cancelEdit').classList.add('hidden');togglePowerbankFields();
   }
   function editProduct(id){
     if(!isAuthorisedAdmin)return;
     const p=products.find(x=>String(x.id)===String(id));if(!p)return;
     $('productId').value=p.id;$('pname').value=p.name||'';$('price').value=p.price??'';$('pcat').value=p.category||'Phones';$('conditionInput').value=p.condition||'Brand New';$('stock').value=p.stock??0;$('description').value=p.description||'';
+    $('pbBrand').value=p.brand||'';$('pbCapacity').value=p.powerbank_capacity||'';$('pbSpeed').value=p.charging_speed||'';$('pbPorts').value=p.ports||'';
+    $('pbWireless').value=String(!!p.wireless_charging);$('pbCable').value=String(!!p.built_in_cable);togglePowerbankFields();
     $('formTitle').textContent='Edit product';$('saveProduct').textContent='Update product';$('cancelEdit').classList.remove('hidden');$('productForm').scrollIntoView({behavior:'smooth'});
   }
   $('cancelEdit').addEventListener('click',resetProductForm);
@@ -240,7 +272,15 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
     e.preventDefault();clearMessage(adminMsg);
     if(!db||!isAuthorisedAdmin)return;
     const id=$('productId').value;
-    const record={name:$('pname').value.trim(),price:Number($('price').value),category:$('pcat').value,condition:$('conditionInput').value,stock:Number($('stock').value),description:$('description').value.trim()};
+    const isPowerBank=$('pcat').value==='Power Banks';
+    const record={name:$('pname').value.trim(),price:Number($('price').value),category:$('pcat').value,condition:$('conditionInput').value,stock:Number($('stock').value),description:$('description').value.trim(),
+      brand:isPowerBank?$('pbBrand').value.trim():null,
+      powerbank_capacity:isPowerBank?$('pbCapacity').value.trim():null,
+      charging_speed:isPowerBank?$('pbSpeed').value.trim():null,
+      ports:isPowerBank?$('pbPorts').value.trim():null,
+      wireless_charging:isPowerBank?$('pbWireless').value==='true':false,
+      built_in_cable:isPowerBank?$('pbCable').value==='true':false
+    };
     if(!record.name||!Number.isFinite(record.price)||record.price<0||!Number.isInteger(record.stock)||record.stock<0){message(adminMsg,'Please enter a valid product name, price and stock quantity.','error');return;}
     const file=$('photo').files[0];
     if(file){
