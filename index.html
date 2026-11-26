@@ -4,79 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FUTURE GADGET | Technology for a better tomorrow</title>
-<meta name="description" content="Shop phones, laptops, power banks, accessories and home appliances at FUTURE GADGET.">
+<meta name="description" content="Shop phones, laptops, accessories and home appliances at FUTURE GADGET.">
 <style>
 :root{--navy:#0c1830;--blue:#2463eb;--ink:#172338;--muted:#64748b;--line:#e5eaf1;--bg:#f7f9fc}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,Arial,sans-serif}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-.wrap{width:min(1180px,92%);margin:auto}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,Arial,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,92%);margin:auto}
 .announcement{background:var(--navy);color:#e5efff;text-align:center;padding:9px;font-size:12px}
-header{background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:13px 0;gap:14px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900}
-.logo{background:var(--blue);color:white;border-radius:12px;width:44px;height:44px;display:grid;place-items:center}
-.tag{display:block;color:var(--muted);font-size:11px;font-weight:500}
-.links{display:flex;gap:20px;color:#46536b;font-size:14px}
-.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:800;display:inline-block}
-.primary{background:var(--blue);color:white}
-.dark{background:var(--navy);color:white}
-.light{background:#edf2f8;color:var(--ink)}
-.hero{margin:24px auto;background:linear-gradient(120deg,#0b1830,#173c7a 68%,#2463eb);color:white;border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.05;margin:12px 0}
-.hero p{color:#d9e7ff;line-height:1.65}
-.hero img{width:100%;height:290px;object-fit:cover;border-radius:18px}
-.cta{display:inline-block;background:white;color:var(--navy);padding:13px 18px;border-radius:10px;font-weight:800;margin-top:8px}
-.section{padding:22px 0}
-.head h2{margin:0;font-size:25px}
-.head p{margin:6px 0;color:var(--muted)}
-.cats,.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.cat{background:white;border:1px solid var(--line);border-radius:15px;padding:15px;display:flex;align-items:center;gap:10px;cursor:pointer}
-.emoji{background:#edf4ff;border-radius:12px;width:45px;height:45px;display:grid;place-items:center;font-size:22px}
-.cat small{display:block;color:var(--muted)}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
-.toolbar input,.toolbar select,.field{padding:12px;border:1px solid var(--line);border-radius:10px;background:white;width:100%;min-width:0}
-.toolbar input{flex:1;min-width:170px}
-.product{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.product img{width:100%;height:185px;object-fit:cover;background:#eef2f7}
-.body{padding:13px}
-.label{display:inline-block;background:#eaf2ff;color:#2258be;padding:5px 8px;border-radius:20px;font-size:11px;font-weight:800}
-.used{background:#fff0dc;color:#905b12}
-.body h3{font-size:15px;margin:8px 0;min-height:35px}
-.price{font-weight:900;color:var(--blue);font-size:16px;margin:9px 0}
-.actions{display:flex;gap:7px}
-.actions button{flex:1;border:0;border-radius:9px;padding:10px;font-size:12px;font-weight:800}
-.empty{background:white;border:1px dashed #cbd5e1;padding:28px;border-radius:14px;color:var(--muted);grid-column:1/-1;text-align:center}
-.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.benefit,.banner{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
-.benefit span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
-.banner{background:#eaf1ff;display:flex;align-items:center;justify-content:space-between}
-.banner p{margin:5px 0;color:var(--muted)}
-footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
-.foot p,.foot a{color:#c6d5e8;line-height:1.7;font-size:14px}
-.floatwa{position:fixed;bottom:16px;right:16px;background:#19b95b;color:white;padding:14px 18px;border-radius:50px;font-weight:900;z-index:7}
-.admin-wrap{width:min(1000px,92%);margin:28px auto}
-.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}
-.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.formgrid label{display:block;font-size:13px;font-weight:700}
-.formgrid label input,.formgrid label select,.formgrid label textarea{margin-top:6px}
-.formgrid .wide{grid-column:1/-1}
-.admin-list{display:grid;gap:10px}
-.admin-item{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px}
-.admin-item img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:#eef2f7}
-.admin-item .grow{flex:1;min-width:0}
-.hidden{display:none!important}
-.notice{padding:12px;border-radius:10px;background:#eff6ff;color:#1e40af;margin:12px 0}
-.error{background:#fff1f2;color:#9f1239}
-.success{background:#ecfdf5;color:#166534}
-.muted{color:var(--muted)}
-.admin-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.specs{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0}
-.power-fields{padding:14px;background:#f3f7ff;border:1px solid #dce8ff;border-radius:12px}
-.power-fields h4{margin:0 0 10px;color:#173c7a}
+header{background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{display:flex;justify-content:space-between;align-items:center;padding:13px 0;gap:14px}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{background:var(--blue);color:white;border-radius:12px;width:44px;height:44px;display:grid;place-items:center}.tag{display:block;color:var(--muted);font-size:11px;font-weight:500}.links{display:flex;gap:20px;color:#46536b;font-size:14px}
+.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:800;display:inline-block}.primary{background:var(--blue);color:white}.dark{background:var(--navy);color:white}.light{background:#edf2f8;color:var(--ink)}
+.hero{margin:24px auto;background:linear-gradient(120deg,#0b1830,#173c7a 68%,#2463eb);color:white;border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.05;margin:12px 0}.hero p{color:#d9e7ff;line-height:1.65}.hero img{width:100%;height:290px;object-fit:cover;border-radius:18px}.cta{display:inline-block;background:white;color:var(--navy);padding:13px 18px;border-radius:10px;font-weight:800;margin-top:8px}
+.section{padding:22px 0}.head h2{margin:0;font-size:25px}.head p{margin:6px 0;color:var(--muted)}.cats,.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{background:white;border:1px solid var(--line);border-radius:15px;padding:15px;display:flex;align-items:center;gap:10px;cursor:pointer}.emoji{background:#edf4ff;border-radius:12px;width:45px;height:45px;display:grid;place-items:center;font-size:22px}.cat small{display:block;color:var(--muted)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.toolbar input,.toolbar select,.field{padding:12px;border:1px solid var(--line);border-radius:10px;background:white;width:100%;min-width:0}.toolbar input{flex:1;min-width:170px}.product{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}.product img{width:100%;height:185px;object-fit:cover;background:#eef2f7}.body{padding:13px}.label{display:inline-block;background:#eaf2ff;color:#2258be;padding:5px 8px;border-radius:20px;font-size:11px;font-weight:800}.used{background:#fff0dc;color:#905b12}.body h3{font-size:15px;margin:8px 0;min-height:35px}.price{font-weight:900;color:var(--blue);font-size:16px;margin:9px 0}.actions{display:flex;gap:7px}.actions button{flex:1;border:0;border-radius:9px;padding:10px;font-size:12px;font-weight:800}
+.empty{background:white;border:1px dashed #cbd5e1;padding:28px;border-radius:14px;color:var(--muted);grid-column:1/-1;text-align:center}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.benefit,.banner{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}.benefit span{display:block;color:var(--muted);font-size:13px;margin-top:5px}.banner{background:#eaf1ff;display:flex;align-items:center;justify-content:space-between}.banner p{margin:5px 0;color:var(--muted)}
+footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}.foot p,.foot a{color:#c6d5e8;line-height:1.7;font-size:14px}.floatwa{position:fixed;bottom:16px;right:16px;background:#19b95b;color:white;padding:14px 18px;border-radius:50px;font-weight:900;z-index:7}
+.admin-wrap{width:min(1000px,92%);margin:28px auto}.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.formgrid label{display:block;font-size:13px;font-weight:700}.formgrid label input,.formgrid label select,.formgrid label textarea{margin-top:6px}.formgrid .wide{grid-column:1/-1}.admin-list{display:grid;gap:10px}.admin-item{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px}.admin-item img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:#eef2f7}.admin-item .grow{flex:1;min-width:0}.hidden{display:none!important}.notice{padding:12px;border-radius:10px;background:#eff6ff;color:#1e40af;margin:12px 0}.error{background:#fff1f2;color:#9f1239}.success{background:#ecfdf5;color:#166534}.muted{color:var(--muted)}.admin-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 @media(max-width:850px){.links{display:none}.hero{grid-template-columns:1fr;padding:26px}.hero img{height:220px}.products{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:580px){.products{grid-template-columns:repeat(2,1fr);gap:9px}.product img{height:145px}.body{padding:10px}.cats{grid-template-columns:repeat(2,1fr);gap:9px}.hero{padding:22px}.benefits{grid-template-columns:1fr}.banner{display:block}.foot{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.admin-item{align-items:flex-start}.admin-item .actions{flex-direction:column}}
 </style>
@@ -84,226 +24,122 @@ footer{background:var(--navy);color:white;margin-top:25px;padding:32px 0}
 <script src="/config.js"></script>
 </head>
 <body>
-<div class="announcement">PHONES · LAPTOPS · POWER BANKS · ACCESSORIES · HOME APPLIANCES | BRAND NEW & FAIRLY USED</div>
+<div class="announcement">PHONES · LAPTOPS · ACCESSORIES · HOME APPLIANCES | BRAND NEW & FAIRLY USED</div>
 <header><div class="wrap nav">
 <a class="brand" href="/"><span class="logo">FG</span><span>FUTURE GADGET<small class="tag">Technology for a better tomorrow.</small></span></a>
 <nav class="links"><a href="#catalogue">Shop</a><a href="#categories">Categories</a><a href="#contact">Contact</a></nav>
 <a class="btn primary" href="https://wa.me/2348163345714?text=Hello%20Future%20Gadget" target="_blank" rel="noopener">WhatsApp us</a>
 </div></header>
-
 <main id="store" class="wrap">
-<section class="hero">
-<div><small style="color:#b5d1ff;font-weight:800;letter-spacing:1.5px">WELCOME TO FUTURE GADGET</small>
-<h1>Technology that moves you forward.</h1>
-<p>Explore phones, laptops, power banks, accessories and home essentials. Browse brand-new and fairly used options and enquire about availability.</p>
-<a class="cta" href="#catalogue">Explore catalogue</a></div>
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="Smartphone showcase">
-</section>
-<section class="section" id="categories"><div class="head"><h2>Shop by category</h2><p>Find the gadget category you need.</p></div>
-<div class="cats">
+<section class="hero"><div><small style="color:#b5d1ff;font-weight:800;letter-spacing:1.5px">WELCOME TO FUTURE GADGET</small>
+<h1>Technology that moves you forward.</h1><p>Explore phones, laptops, accessories and home essentials. Browse brand-new and fairly used options and enquire about availability.</p><a class="cta" href="#catalogue">Explore catalogue</a></div>
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="Smartphone showcase"></section>
+<section class="section" id="categories"><div class="head"><h2>Shop by category</h2><p>Find the gadget category you need.</p></div><div class="cats">
 <div class="cat" data-cat="Phones"><div class="emoji">📱</div><div><b>Phones</b><small>Phones & tablets</small></div></div>
 <div class="cat" data-cat="Laptops"><div class="emoji">💻</div><div><b>Laptops</b><small>Work & study</small></div></div>
-<div class="cat" data-cat="Power Banks"><div class="emoji">🔋</div><div><b>Power banks</b><small>Portable charging</small></div></div>
 <div class="cat" data-cat="Accessories"><div class="emoji">🎧</div><div><b>Accessories</b><small>Everyday essentials</small></div></div>
 <div class="cat" data-cat="Home Appliances"><div class="emoji">🏠</div><div><b>Home appliances</b><small>Home & living</small></div></div>
 </div></section>
 <section class="section" id="catalogue"><div class="head"><h2>Explore the catalogue</h2><p>Current products, prices and availability.</p></div>
 <div class="toolbar"><input id="search" placeholder="Search products or brands…" aria-label="Search products">
-<select id="category"><option value="">All categories</option><option>Phones</option><option>Laptops</option><option>Power Banks</option><option>Accessories</option><option>Home Appliances</option><option>Appliances</option><option>Other</option></select>
+<select id="category"><option value="">All categories</option><option>Phones</option><option>Laptops</option><option>Accessories</option><option>Home Appliances</option><option>Other</option></select>
 <select id="condition"><option value="">All conditions</option><option>Brand New</option><option>Fairly Used</option></select></div>
-<div class="products" id="grid"><div class="empty">Loading products…</div></div>
-</section>
+<div class="products" id="grid"><div class="empty">Loading products…</div></div></section>
 <section class="section"><div class="head"><h2>Shopping made simple</h2></div><div class="benefits">
-<div class="benefit"><b>📦 New & fairly used</b><span>Condition labels on listings.</span></div>
-<div class="benefit"><b>💬 WhatsApp enquiries</b><span>Ask about stock and product details.</span></div>
-<div class="benefit"><b>🤝 Personal assistance</b><span>Get help choosing your gadget.</span></div>
+<div class="benefit"><b>📦 New & fairly used</b><span>Condition labels on listings.</span></div><div class="benefit"><b>💬 WhatsApp enquiries</b><span>Ask about stock and product details.</span></div><div class="benefit"><b>🤝 Personal assistance</b><span>Get help choosing your gadget.</span></div>
 </div></section>
-<section class="section"><div class="banner"><div><h2>Looking for a particular gadget?</h2><p>Message us to check available options.</p></div>
-<a class="btn primary" href="https://wa.me/2348163345714?text=Hello%20Future%20Gadget" target="_blank" rel="noopener">Chat with us</a></div></section>
+<section class="section"><div class="banner"><div><h2>Looking for a particular gadget?</h2><p>Message us to check available options.</p></div><a class="btn primary" href="https://wa.me/2348163345714?text=Hello%20Future%20Gadget" target="_blank" rel="noopener">Chat with us</a></div></section>
 </main>
-
 <main id="admin" class="admin-wrap hidden">
 <div class="admin-top"><div class="brand"><span class="logo">FG</span><span>FUTURE GADGET<small class="tag">Private product dashboard</small></span></div><a href="/" class="btn light">View store</a></div>
 <div id="loginPanel" class="panel"><h2>Admin sign in</h2><p class="muted">Sign in with your authorised FUTURE GADGET admin account.</p>
-<form id="loginForm" class="formgrid">
-<label>Email<input class="field" id="email" type="email" autocomplete="username" required></label>
-<label>Password<input class="field" id="password" type="password" autocomplete="current-password" required></label>
-<div class="wide"><button class="btn primary" type="submit">Sign in</button></div>
-</form><div id="loginMsg" aria-live="polite"></div></div>
+<form id="loginForm" class="formgrid"><label>Email<input class="field" id="email" type="email" autocomplete="username" required></label><label>Password<input class="field" id="password" type="password" autocomplete="current-password" required></label><div class="wide"><button class="btn primary" type="submit">Sign in</button></div></form><div id="loginMsg" aria-live="polite"></div></div>
 <div id="dashboard" class="hidden">
 <div class="panel"><div class="admin-top"><div><h2 style="margin:0">Product management</h2><p class="muted" style="margin:5px 0">Add products, update prices, photos and stock.</p></div><button id="logout" class="btn light">Sign out</button></div><div id="adminMsg" aria-live="polite"></div></div>
 <div class="panel"><h3 id="formTitle">Add a product</h3><form id="productForm" class="formgrid">
 <input type="hidden" id="productId">
 <label>Product name<input class="field" id="pname" required maxlength="120" placeholder="e.g. Samsung Galaxy A15"></label>
 <label>Price (₦)<input class="field" id="price" type="number" min="0" step="1" required placeholder="e.g. 250000"></label>
-<label>Category<select class="field" id="pcat" required><option value="Phones">Phones</option><option value="Laptops">Laptops</option><option value="Power Banks">Power Banks</option><option value="Accessories">Accessories</option><option value="Home Appliances">Home Appliances</option><option value="Appliances">Appliances</option><option value="Other">Other</option></select></label>
+<label>Category<select class="field" id="pcat" required><option value="Phones">Phones</option><option value="Laptops">Laptops</option><option value="Accessories">Accessories</option><option value="Home Appliances">Home Appliances</option><option value="Other">Other</option></select></label>
 <label>Condition<select class="field" id="conditionInput" required><option>Brand New</option><option>Fairly Used</option></select></label>
 <label>Stock quantity<input class="field" id="stock" type="number" min="0" step="1" value="1" required></label>
 <label>Product photo<input class="field" id="photo" type="file" accept="image/*"></label>
-<div id="powerbankFields" class="wide power-fields hidden">
-<h4>🔋 Power bank details</h4>
-<div class="formgrid">
-<label>Brand<input class="field" id="pbBrand" maxlength="80" placeholder="e.g. Oraimo, Anker, Xiaomi"></label>
-<label>Capacity<input class="field" id="pbCapacity" maxlength="40" placeholder="e.g. 20000mAh"></label>
-<label>Charging speed<input class="field" id="pbSpeed" maxlength="40" placeholder="e.g. 22.5W or 65W"></label>
-<label>USB ports<input class="field" id="pbPorts" maxlength="100" placeholder="e.g. 2 USB-A, 1 USB-C"></label>
-<label>Wireless charging<select class="field" id="pbWireless"><option value="false">No</option><option value="true">Yes</option></select></label>
-<label>Built-in cable<select class="field" id="pbCable"><option value="false">No</option><option value="true">Yes</option></select></label>
-</div></div>
 <label class="wide">Description<textarea class="field" id="description" rows="3" placeholder="Product details"></textarea></label>
 <div class="wide" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" type="submit" id="saveProduct">Save product</button><button class="btn light hidden" type="button" id="cancelEdit">Cancel edit</button></div>
 </form></div>
 <div class="panel"><h3>Your products</h3><div id="productList" class="admin-list">Loading…</div></div>
-</div>
-</main>
-
+</div></main>
 <footer id="contact"><div class="wrap foot">
 <div><div class="brand"><span class="logo">FG</span><span>FUTURE GADGET<small class="tag">Technology for a better tomorrow.</small></span></div><p>Gadgets for work, study and everyday life.</p></div>
-<div><b>Categories</b><p><a href="/#categories">Phones</a><br><a href="/#categories">Laptops</a><br><a href="/#categories">Power banks</a><br><a href="/#categories">Accessories</a><br><a href="/#categories">Home appliances</a></p></div>
+<div><b>Categories</b><p><a href="/#categories">Phones</a><br><a href="/#categories">Laptops</a><br><a href="/#categories">Accessories</a><br><a href="/#categories">Home appliances</a></p></div>
 <div><b>Contact</b><p>WhatsApp: +234 816 334 5714<br><a href="https://wa.me/2348163345714">Message us</a></p></div>
 </div></footer>
 <a class="floatwa" href="https://wa.me/2348163345714?text=Hello%20Future%20Gadget" target="_blank" rel="noopener">WhatsApp</a>
-
 <script>
 (() => {
-  const $ = id => document.getElementById(id);
-  const isAdmin = location.pathname.replace(/\/+$/,'') === '/admin';
-  $('store').classList.toggle('hidden',isAdmin);
-  $('admin').classList.toggle('hidden',!isAdmin);
-
-  const cfg = window.FG_CONFIG || {};
-  let db = null, products = [], isAuthorisedAdmin = false;
-  const money = n => '₦' + Number(n || 0).toLocaleString('en-NG');
-  const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const message = (el,txt,kind='notice') => {el.className='notice '+kind;el.textContent=txt;};
-  const clearMessage = el => {el.className='';el.textContent='';};
-
-  if(window.supabase && cfg.url && cfg.publishableKey && !String(cfg.publishableKey).includes('PASTE_')) {
-    db = window.supabase.createClient(cfg.url,cfg.publishableKey);
-  }
-
-  function renderStore(){
-    const q=$('search').value.trim().toLowerCase(),cat=$('category').value,cond=$('condition').value;
-    const list=products.filter(p=>(!q||[p.name,p.description,p.category,p.brand,p.powerbank_capacity].join(' ').toLowerCase().includes(q))&&(!cat||p.category===cat)&&(!cond||p.condition===cond));
-    $('grid').innerHTML=list.length?list.map(p=>{
-      const specs=p.category==='Power Banks'?[
-        p.brand?'Brand: '+p.brand:'',
-        p.powerbank_capacity?'Capacity: '+p.powerbank_capacity:'',
-        p.charging_speed?'Speed: '+p.charging_speed:'',
-        p.ports?'Ports: '+p.ports:'',
-        p.wireless_charging?'Wireless charging':'',
-        p.built_in_cable?'Built-in cable':''
-      ].filter(Boolean).join(' · '):'';
-      return `<article class="product"><img src="${escapeHtml(p.image_url||'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80')}" alt="${escapeHtml(p.name)}" loading="lazy"><div class="body"><span class="label ${p.condition==='Fairly Used'?'used':''}">${escapeHtml(p.condition||'')}</span><h3>${escapeHtml(p.name)}</h3>${specs?`<p class="specs">${escapeHtml(specs)}</p>`:''}<div class="price">${money(p.price)}</div><p class="muted" style="font-size:12px">${Number(p.stock)>0?Number(p.stock)+' in stock':'Currently out of stock'}</p><div class="actions"><button class="btn light" data-enquire="${escapeHtml(p.id)}">Enquire</button><button class="btn dark" data-order="${escapeHtml(p.id)}">Order</button></div></div></article>`;
-    }).join(''):'<div class="empty">No products match your search yet.</div>';
-    $('grid').querySelectorAll('[data-enquire],[data-order]').forEach(btn=>btn.addEventListener('click',()=> {
-      const p=products.find(x=>String(x.id)===String(btn.dataset.enquire||btn.dataset.order));
-      if(p) window.open('https://wa.me/2348163345714?text='+encodeURIComponent('Hello FUTURE GADGET, I am interested in '+p.name+'. Price shown: '+money(p.price)+'. Please confirm availability.'),'_blank','noopener');
-    }));
-  }
-
-  async function loadPublicProducts(){
-    if(!db){$('grid').innerHTML='<div class="empty">Store connection is not configured. Please check the website configuration.</div>';return;}
-    const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
-    if(error){$('grid').innerHTML='<div class="empty">Products could not be loaded right now. Please try again later.</div>';return;}
-    products=data||[];renderStore();
-  }
-  ['search','category','condition'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',renderStore));
-  document.querySelectorAll('.cat').forEach(el=>el.addEventListener('click',()=>{$('category').value=el.dataset.cat;$('catalogue').scrollIntoView({behavior:'smooth'});renderStore();}));
-
-  const loginPanel=$('loginPanel'),dashboard=$('dashboard'),loginMsg=$('loginMsg'),adminMsg=$('adminMsg');
-  function setAdminView(allowed){
-    isAuthorisedAdmin=allowed;
-    loginPanel.classList.toggle('hidden',allowed);
-    dashboard.classList.toggle('hidden',!allowed);
-  }
-  function togglePowerbankFields(){
-    const show=$('pcat').value==='Power Banks';
-    $('powerbankFields').classList.toggle('hidden',!show);
-  }
-  $('pcat').addEventListener('change',togglePowerbankFields);
-
-  async function loadAdminProducts(){
-    const list=$('productList');list.textContent='Loading products…';
-    const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
-    if(error){list.textContent='Could not load products: '+error.message;return;}
-    products=data||[];
-    list.innerHTML=products.length?products.map(p=>`<div class="admin-item"><img src="${escapeHtml(p.image_url||'')}" alt=""><div class="grow"><b>${escapeHtml(p.name)}</b><br><small>${escapeHtml(p.category||'')} · ${money(p.price)} · ${escapeHtml(p.condition||'')} · Stock: ${Number(p.stock)||0}</small>${p.category==='Power Banks'?`<br><small>${escapeHtml([p.brand,p.powerbank_capacity,p.charging_speed].filter(Boolean).join(' · '))}</small>`:''}</div><div class="actions"><button class="btn light" data-edit="${escapeHtml(p.id)}">Edit</button><button class="btn light" data-delete="${escapeHtml(p.id)}">Delete</button></div></div>`).join(''):'<p class="muted">No products yet. Add your first product above.</p>';
-    list.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editProduct(b.dataset.edit)));
-    list.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteProduct(b.dataset.delete)));
-  }
-  async function checkAdmin(){
-    if(!db){message(loginMsg,'Supabase configuration is missing.','error');return;}
-    const {data:{session}}=await db.auth.getSession();
-    if(!session){setAdminView(false);return;}
-    const {data:{user},error}=await db.auth.getUser();
-    if(error||!user||user.app_metadata?.role!=='admin'){
-      await db.auth.signOut();setAdminView(false);
-      message(loginMsg,'This account is not authorised as an administrator.','error');return;
-    }
-    setAdminView(true);message(adminMsg,'Signed in as administrator.','success');await loadAdminProducts();
-  }
-  if(isAdmin) checkAdmin(); else loadPublicProducts();
-
-  $('loginForm').addEventListener('submit',async e=>{
-    e.preventDefault();clearMessage(loginMsg);
-    if(!db){message(loginMsg,'Supabase is not configured.','error');return;}
-    message(loginMsg,'Signing in…');
-    const {error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});
-    if(error){message(loginMsg,'Sign-in failed. Please check your email and password.','error');return;}
-    await checkAdmin();
-  });
-  $('logout').addEventListener('click',async()=>{if(db)await db.auth.signOut();setAdminView(false);clearMessage(adminMsg);message(loginMsg,'You have signed out.');});
-
-  function resetProductForm(){
-    $('productForm').reset();$('productId').value='';$('stock').value='1';$('formTitle').textContent='Add a product';$('saveProduct').textContent='Save product';$('cancelEdit').classList.add('hidden');togglePowerbankFields();
-  }
-  function editProduct(id){
-    if(!isAuthorisedAdmin)return;
-    const p=products.find(x=>String(x.id)===String(id));if(!p)return;
-    $('productId').value=p.id;$('pname').value=p.name||'';$('price').value=p.price??'';$('pcat').value=p.category||'Phones';$('conditionInput').value=p.condition||'Brand New';$('stock').value=p.stock??0;$('description').value=p.description||'';
-    $('pbBrand').value=p.brand||'';$('pbCapacity').value=p.powerbank_capacity||'';$('pbSpeed').value=p.charging_speed||'';$('pbPorts').value=p.ports||'';
-    $('pbWireless').value=String(!!p.wireless_charging);$('pbCable').value=String(!!p.built_in_cable);togglePowerbankFields();
-    $('formTitle').textContent='Edit product';$('saveProduct').textContent='Update product';$('cancelEdit').classList.remove('hidden');$('productForm').scrollIntoView({behavior:'smooth'});
-  }
-  $('cancelEdit').addEventListener('click',resetProductForm);
-
-  $('productForm').addEventListener('submit',async e=>{
-    e.preventDefault();clearMessage(adminMsg);
-    if(!db||!isAuthorisedAdmin)return;
-    const id=$('productId').value;
-    const isPowerBank=$('pcat').value==='Power Banks';
-    const record={name:$('pname').value.trim(),price:Number($('price').value),category:$('pcat').value,condition:$('conditionInput').value,stock:Number($('stock').value),description:$('description').value.trim(),
-      brand:isPowerBank?$('pbBrand').value.trim():null,
-      powerbank_capacity:isPowerBank?$('pbCapacity').value.trim():null,
-      charging_speed:isPowerBank?$('pbSpeed').value.trim():null,
-      ports:isPowerBank?$('pbPorts').value.trim():null,
-      wireless_charging:isPowerBank?$('pbWireless').value==='true':false,
-      built_in_cable:isPowerBank?$('pbCable').value==='true':false
-    };
-    if(!record.name||!Number.isFinite(record.price)||record.price<0||!Number.isInteger(record.stock)||record.stock<0){message(adminMsg,'Please enter a valid product name, price and stock quantity.','error');return;}
-    const file=$('photo').files[0];
-    if(file){
-      if(!file.type.startsWith('image/')||file.size>5*1024*1024){message(adminMsg,'Choose an image file smaller than 5 MB.','error');return;}
-      const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';
-      const path=Date.now()+'-'+Math.random().toString(36).slice(2)+'.'+ext;
-      const {error:uploadError}=await db.storage.from('product-images').upload(path,file,{upsert:false,contentType:file.type});
-      if(uploadError){message(adminMsg,'Photo upload failed: '+uploadError.message,'error');return;}
-      record.image_url=db.storage.from('product-images').getPublicUrl(path).data.publicUrl;
-    }
-    const result=id?await db.from('products').update(record).eq('id',id):await db.from('products').insert(record);
-    if(result.error){message(adminMsg,'Could not save product: '+result.error.message,'error');return;}
-    message(adminMsg,id?'Product updated successfully.':'Product added successfully.','success');
-    resetProductForm();await loadAdminProducts();
-  });
-
-  async function deleteProduct(id){
-    if(!isAuthorisedAdmin)return;
-    const p=products.find(x=>String(x.id)===String(id));if(!p||!confirm('Delete '+p.name+'? This cannot be undone.'))return;
-    const {error}=await db.from('products').delete().eq('id',id);
-    if(error){message(adminMsg,'Could not delete product: '+error.message,'error');return;}
-    message(adminMsg,'Product deleted.','success');await loadAdminProducts();
-  }
+ const $ = id => document.getElementById(id);
+ const isAdmin = location.pathname.replace(/\/+$/,'') === '/admin';
+ $('store').classList.toggle('hidden',isAdmin); $('admin').classList.toggle('hidden',!isAdmin);
+ const cfg=window.FG_CONFIG||{}; let db=null,products=[],isAuthorisedAdmin=false;
+ const money=n=>'₦'+Number(n||0).toLocaleString('en-NG');
+ const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const message=(el,txt,kind='notice')=>{el.className='notice '+kind;el.textContent=txt;};
+ const clearMessage=el=>{el.className='';el.textContent='';};
+ if(window.supabase&&cfg.url&&cfg.publishableKey&&!String(cfg.publishableKey).includes('PASTE_')) db=window.supabase.createClient(cfg.url,cfg.publishableKey);
+ function renderStore(){
+  const q=$('search').value.trim().toLowerCase(),cat=$('category').value,cond=$('condition').value;
+  const list=products.filter(p=>(!q||[p.name,p.description,p.category].join(' ').toLowerCase().includes(q))&&(!cat||p.category===cat)&&(!cond||p.condition===cond));
+  $('grid').innerHTML=list.length?list.map(p=>`<article class="product"><img src="${escapeHtml(p.image_url||'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80')}" alt="${escapeHtml(p.name)}" loading="lazy"><div class="body"><span class="label ${p.condition==='Fairly Used'?'used':''}">${escapeHtml(p.condition||'')}</span><h3>${escapeHtml(p.name)}</h3><div class="price">${money(p.price)}</div><p class="muted" style="font-size:12px">${Number(p.stock)>0?Number(p.stock)+' in stock':'Currently out of stock'}</p><div class="actions"><button class="btn light" data-enquire="${escapeHtml(p.id)}">Enquire</button><button class="btn dark" data-order="${escapeHtml(p.id)}">Order</button></div></div></article>`).join(''):'<div class="empty">No products match your search yet.</div>';
+  $('grid').querySelectorAll('[data-enquire],[data-order]').forEach(btn=>btn.addEventListener('click',()=>{const p=products.find(x=>String(x.id)===String(btn.dataset.enquire||btn.dataset.order));if(p)window.open('https://wa.me/2348163345714?text='+encodeURIComponent('Hello FUTURE GADGET, I am interested in '+p.name+'. Price shown: '+money(p.price)+'. Please confirm availability.'),'_blank','noopener');}));
+ }
+ async function loadPublicProducts(){
+  if(!db){$('grid').innerHTML='<div class="empty">Store connection is not configured. Please check the website configuration.</div>';return;}
+  const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
+  if(error){$('grid').innerHTML='<div class="empty">Products could not be loaded right now. Please try again later.</div>';return;}
+  products=data||[];renderStore();
+ }
+ ['search','category','condition'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',renderStore));
+ document.querySelectorAll('.cat').forEach(el=>el.addEventListener('click',()=>{$('category').value=el.dataset.cat;$('catalogue').scrollIntoView({behavior:'smooth'});renderStore();}));
+ const loginPanel=$('loginPanel'),dashboard=$('dashboard'),loginMsg=$('loginMsg'),adminMsg=$('adminMsg');
+ function setAdminView(allowed){isAuthorisedAdmin=allowed;loginPanel.classList.toggle('hidden',allowed);dashboard.classList.toggle('hidden',!allowed);}
+ async function loadAdminProducts(){
+  const list=$('productList');list.textContent='Loading products…';
+  const {data,error}=await db.from('products').select('*').order('created_at',{ascending:false});
+  if(error){list.textContent='Could not load products: '+error.message;return;}
+  products=data||[];
+  list.innerHTML=products.length?products.map(p=>`<div class="admin-item"><img src="${escapeHtml(p.image_url||'')}" alt=""><div class="grow"><b>${escapeHtml(p.name)}</b><br><small>${escapeHtml(p.category||'')} · ${money(p.price)} · ${escapeHtml(p.condition||'')} · Stock: ${Number(p.stock)||0}</small></div><div class="actions"><button class="btn light" data-edit="${escapeHtml(p.id)}">Edit</button><button class="btn light" data-delete="${escapeHtml(p.id)}">Delete</button></div></div>`).join(''):'<p class="muted">No products yet. Add your first product above.</p>';
+  list.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editProduct(b.dataset.edit)));
+  list.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteProduct(b.dataset.delete)));
+ }
+ async function checkAdmin(){
+  if(!db){message(loginMsg,'Supabase configuration is missing.','error');return;}
+  const {data:{session}}=await db.auth.getSession();if(!session){setAdminView(false);return;}
+  const {data:{user},error}=await db.auth.getUser();
+  if(error||!user||user.app_metadata?.role!=='admin'){await db.auth.signOut();setAdminView(false);message(loginMsg,'This account is not authorised as an administrator.','error');return;}
+  setAdminView(true);message(adminMsg,'Signed in as administrator.','success');await loadAdminProducts();
+ }
+ if(isAdmin)checkAdmin();else loadPublicProducts();
+ $('loginForm').addEventListener('submit',async e=>{e.preventDefault();clearMessage(loginMsg);if(!db){message(loginMsg,'Supabase is not configured.','error');return;}message(loginMsg,'Signing in…');const {error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){message(loginMsg,'Sign-in failed. Please check your email and password.','error');return;}await checkAdmin();});
+ $('logout').addEventListener('click',async()=>{if(db)await db.auth.signOut();setAdminView(false);clearMessage(adminMsg);message(loginMsg,'You have signed out.');});
+ function resetProductForm(){$('productForm').reset();$('productId').value='';$('stock').value='1';$('formTitle').textContent='Add a product';$('saveProduct').textContent='Save product';$('cancelEdit').classList.add('hidden');}
+ function editProduct(id){
+  if(!isAuthorisedAdmin)return;const p=products.find(x=>String(x.id)===String(id));if(!p)return;
+  $('productId').value=p.id;$('pname').value=p.name||'';$('price').value=p.price??'';$('pcat').value=p.category||'Phones';$('conditionInput').value=p.condition||'Brand New';$('stock').value=p.stock??0;$('description').value=p.description||'';
+  $('formTitle').textContent='Edit product';$('saveProduct').textContent='Update product';$('cancelEdit').classList.remove('hidden');$('productForm').scrollIntoView({behavior:'smooth'});
+ }
+ $('cancelEdit').addEventListener('click',resetProductForm);
+ $('productForm').addEventListener('submit',async e=>{
+  e.preventDefault();clearMessage(adminMsg);if(!db||!isAuthorisedAdmin)return;
+  const id=$('productId').value;
+  const record={name:$('pname').value.trim(),price:Number($('price').value),category:$('pcat').value,condition:$('conditionInput').value,stock:Number($('stock').value),description:$('description').value.trim()};
+  if(!record.name||!Number.isFinite(record.price)||record.price<0||!Number.isInteger(record.stock)||record.stock<0){message(adminMsg,'Please enter a valid product name, price and stock quantity.','error');return;}
+  const file=$('photo').files[0];
+  if(file){if(!file.type.startsWith('image/')||file.size>5*1024*1024){message(adminMsg,'Choose an image file smaller than 5 MB.','error');return;}const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';const path=Date.now()+'-'+Math.random().toString(36).slice(2)+'.'+ext;const {error:uploadError}=await db.storage.from('product-images').upload(path,file,{upsert:false,contentType:file.type});if(uploadError){message(adminMsg,'Photo upload failed: '+uploadError.message,'error');return;}record.image_url=db.storage.from('product-images').getPublicUrl(path).data.publicUrl;}
+  const result=id?await db.from('products').update(record).eq('id',id):await db.from('products').insert(record);
+  if(result.error){message(adminMsg,'Could not save product: '+result.error.message,'error');return;}
+  message(adminMsg,id?'Product updated successfully.':'Product added successfully.','success');resetProductForm();await loadAdminProducts();
+ });
+ async function deleteProduct(id){if(!isAuthorisedAdmin)return;const p=products.find(x=>String(x.id)===String(id));if(!p||!confirm('Delete '+p.name+'? This cannot be undone.'))return;const {error}=await db.from('products').delete().eq('id',id);if(error){message(adminMsg,'Could not delete product: '+error.message,'error');return;}message(adminMsg,'Product deleted.','success');await loadAdminProducts();}
 })();
 </script>
 </body>
